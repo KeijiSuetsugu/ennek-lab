@@ -165,6 +165,33 @@ a {
   width: 100%;
 }
 
+.nav-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
 /* メインコンテンツ */
 .main {
   max-width: 1400px;

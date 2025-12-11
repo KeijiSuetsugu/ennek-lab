@@ -32,6 +32,18 @@ export default function RootLayout({
             <nav className="nav">
               <Link href="/" className="nav-link">ホーム</Link>
               <Link href="/about" className="nav-link">サイトについて</Link>
+              <Link href="/contact" className="nav-link">お問い合わせ</Link>
+              <div className="nav-social">
+                <a href="https://x.com/enneklab" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X (Twitter)">
+                  𝕏
+                </a>
+                <a href="https://www.instagram.com/selfmind_ennek/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                  📸
+                </a>
+                <a href="https://www.youtube.com/channel/UC67sznX4BXhsI-mmaYKCS8A" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube">
+                  ▶️
+                </a>
+              </div>
             </nav>
           </div>
         </header>
