@@ -15,8 +15,7 @@ export default function Home() {
           わかりやすく解説
         </h1>
         <p className="hero-description">
-          ChatGPT、Claude、画像生成AI、機械学習など、
-          最新のAI技術に関する実用的な情報を毎日お届けします。
+          ChatGPT、Gemini、画像生成AIなど最新のAI技術に関する仕事でも活躍できる実用的な情報を毎日お届けします。
         </p>
       </section>
 
