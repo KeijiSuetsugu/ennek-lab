@@ -11,24 +11,26 @@
     "generate:daily": "tsx scripts/daily-generator.ts"
   },
   "dependencies": {
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "openai": "^4.70.0",
+    "bcryptjs": "^3.0.3",
+    "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
     "marked": "^14.0.0",
-    "date-fns": "^3.6.0",
-    "node-cron": "^3.0.3"
+    "next": "^14.2.0",
+    "next-auth": "^4.24.13",
+    "node-cron": "^3.0.3",
+    "openai": "^4.70.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.0",
+    "@types/node-cron": "^3.0.11",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
-    "@types/node-cron": "^3.0.11",
-    "typescript": "^5.4.0",
-    "tsx": "^4.19.0",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.0"
+    "eslint-config-next": "^14.2.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0"
   }
 }
-

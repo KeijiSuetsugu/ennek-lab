@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import SessionProvider from '@/components/SessionProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
+        <SessionProvider>
         <header className="header">
           <div className="header-inner">
             <Link href="/" className="logo">
@@ -60,6 +62,7 @@ export default function RootLayout({
             </p>
           </div>
         </footer>
+        </SessionProvider>
       </body>
     </html>
   )
