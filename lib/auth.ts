@@ -71,3 +71,4 @@ export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET || 'your-super-secret-key-change-in-production',
 }
 
+

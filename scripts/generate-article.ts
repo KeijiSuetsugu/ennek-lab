@@ -13,6 +13,9 @@ const topicsLogPath = path.join(process.cwd(), 'content/topics-log.json')
 
 // 情報収集元となるAI関連メディア・ソース
 const AI_INFORMATION_SOURCES = [
+  // ★★★ メインソース ★★★
+  'DaiGo Video Lab AI - メンタリストDaiGoによるAI活用・最新AI技術の解説動画 (https://daigovideolab.jp/?select=ai)',
+  
   // 国内AIメディア
   'Ledge.ai - 日本最大級のAIメディア',
   'SHIFT AI - AI活用情報メディア',
@@ -34,6 +37,13 @@ const AI_INFORMATION_SOURCES = [
   'Sora公式 - OpenAI動画生成AIの情報',
   'イケハヤ (note) - AI活用の実践ノウハウ',
 ]
+
+// メインの情報源（優先的に参照）
+const MAIN_SOURCE = {
+  name: 'DaiGo Video Lab AI',
+  url: 'https://daigovideolab.jp/?select=ai',
+  description: 'メンタリストDaiGoによるAI活用の実践的な解説。心理学×AIの独自視点で、AIの使い方や最新技術を分かりやすく紹介。',
+}
 
 // AI技術に関するトピックカテゴリ
 const TOPIC_CATEGORIES = [
@@ -185,7 +195,13 @@ ${todayStr}
 - 最新のリリース情報、アップデート、発表、研究成果などが対象
 - 「〇〇が発表されました」「〇〇がリリースされました」という切り口で
 
-## 参考にすべき情報源（これらで昨日話題になったトピックを選ぶ）
+## ★★★ メインの情報源（最優先で参考にする）★★★
+**${MAIN_SOURCE.name}** (${MAIN_SOURCE.url})
+${MAIN_SOURCE.description}
+
+→ このサイトで紹介されているAI活用法、最新技術、心理学×AIの視点を参考に、実用的で分かりやすいトピックを選んでください。
+
+## その他の参考情報源
 ${randomSources}
 
 ## 考慮すべき最新トレンドキーワード
@@ -268,7 +284,7 @@ async function generateArticleContent(topic: string, keywords: string[]): Promis
   // 参照すべき情報源をすべて含める
   const allSources = AI_INFORMATION_SOURCES.map(s => `- ${s}`).join('\n')
 
-  const prompt = `あなたは日本の主要AIメディア（Ledge.ai、SHIFT AI、AI NOWなど）や、OpenAI・Google・Metaの公式ブログ、SNSで話題のAI情報に精通した人気ライターです。
+  const prompt = `あなたは日本の主要AIメディアや、メンタリストDaiGoのAI解説動画のスタイルに精通した人気ライターです。
 
 ## 📅 日付情報
 - 今日: ${todayStr}
@@ -283,7 +299,14 @@ ${topic}
 ## キーワード
 ${keywords.join('、')}
 
-## 参考にすべき情報源（これらのメディアの記事スタイル・情報を参考に）
+## ★★★ メインの情報源・スタイル参考 ★★★
+**${MAIN_SOURCE.name}** (${MAIN_SOURCE.url})
+${MAIN_SOURCE.description}
+
+→ DaiGoの動画のように、複雑なAI技術を「誰でも分かる言葉」で、「すぐに使える実践的な内容」として伝えてください。
+→ 心理学的な視点や、「なぜこれが重要なのか」という本質的な解説を心がけてください。
+
+## その他の参考情報源
 ${allSources}
 
 ## ⚠️ 重要：「昨日のニュース」として書く

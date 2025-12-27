@@ -5,11 +5,11 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Ennek Lab | 最新AI技術の実用的な解説ブログ',
-  description: '最新のAI技術、機械学習、深層学習、自然言語処理などの実用的な情報を毎日更新。ChatGPT、Claude、画像生成AI、自動化ツールなど幅広くカバー。',
-  keywords: 'AI, 人工知能, 機械学習, ChatGPT, Claude, 画像生成AI, 深層学習, 自然言語処理',
+  description: '最新のAI技術などの実用的な情報を毎日更新。ChatGPT、Claude、画像生成AI、自動化ツール、Gemini、NotebookLM,Manus、Deepseekなど幅広くカバー。',
+  keywords: 'AI, 人工知能, ChatGPT, Claude, 画像生成AI, 自然言語処理',
   openGraph: {
     title: 'Ennek Lab | 最新AI技術の実用的な解説ブログ',
-    description: '最新のAI技術、機械学習、深層学習、自然言語処理などの実用的な情報を毎日更新。',
+    description: '最新のAI技術、Gemini、画像生成AI、自動化ツール、AIエージェント、NotebookLM、Manus、Deepseekなどの実用的な情報を毎日更新。',
     type: 'website',
     url: 'https://ennekai-lab.com',
   },
